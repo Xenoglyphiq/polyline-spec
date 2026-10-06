@@ -27,3 +27,6 @@ jobs:
         run: |
           uv run bench/generate.py
           git diff --exit-code bench/
+
+      - name: Reference benchmark builds and round-trips the input
+        run: cargo run --release --manifest-path bench/rust/Cargo.toml
