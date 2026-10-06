@@ -12,7 +12,7 @@ The spec and conformance cases for Polyline. Each language port lives in its own
 |---|---|---|---|---|---|
 | Zig | [`Xenoglyphiq/polyline-zig`](https://github.com/Xenoglyphiq/polyline-zig) | `polyline` | 0.1.1 | core ✓ full ✓ (44/44) | **released v0.1.0**: git tag; tagged `zig-package` for zigistry to index |
 | Julia | [`Xenoglyphiq/EncodedPolyline.jl`](https://github.com/Xenoglyphiq/EncodedPolyline.jl) | `EncodedPolyline` | 0.1.1 | core ✓ full ✓ (44/44) | feature-complete; first release pending |
-| Nim | [`Xenoglyphiq/polyline-nim`](https://github.com/Xenoglyphiq/polyline-nim) | `polyline` | 0.1.1 | core ✓ full ✓ (44/44) | **released v0.1.0**: git tag; Nimble directory listing in review |
+| Nim | [`Xenoglyphiq/polyline-nim`](https://github.com/Xenoglyphiq/polyline-nim) | `polyline` | 0.1.1 | core ✓ full ✓ (44/44) | **released v0.1.0**: git tag; listed in the Nimble directory (`nimble install polyline`) |
 
 All three ports are within 2× of the Rust reference on both operations (`bench/README.md`). Install instructions and examples are in each port's repo.
 
