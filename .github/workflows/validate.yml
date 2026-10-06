@@ -1,0 +1,29 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+
+      - name: Validate spec and fixtures
+        run: uv run --no-project --with pyyaml --with jsonschema python .kit/validate.py .
+
+      - name: Fixtures are reproducible
+        run: |
+          uv run conformance/generate/generate.py
+          git diff --exit-code conformance/
+
+      - name: Benchmark input is reproducible
+        run: |
+          uv run bench/generate.py
+          git diff --exit-code bench/
