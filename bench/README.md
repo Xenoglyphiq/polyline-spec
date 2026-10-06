@@ -27,6 +27,7 @@ cargo run --release --manifest-path bench/rust/Cargo.toml
 
 | Date | Machine | encode median | decode median |
 |---|---|---|---|
-| — | — | — | — |
+| 2026-10-05 | Apple M5 Pro, macOS 26.6.2, on AC power | 0.891 ms | 0.612 ms |
+| 2026-10-05 (second session, after the ports' optimization pass) | same | 0.892 ms | 0.643 ms |
 
-To be recorded on a quiet machine before the first port reaches M3.
+Each number is the median of three medians: the reference and every port ran three rounds, interleaved, in one session (load average about 4.9 on 18 cores), so background noise hit all of them alike. Ports compare against the reference from the same session; re-measure the reference whenever ports are measured on a different machine.
