@@ -70,5 +70,5 @@ performance:
 
 ports:
   - { language: zig, status: planned, package: polyline, dependency_tier: T0 }
-  - { language: julia, status: planned, package: EncodedPolylines, dependency_tier: T0 }
+  - { language: julia, status: planned, package: EncodedPolyline, dependency_tier: T0 }
   - { language: nim, status: planned, package: polyline, dependency_tier: T0 }

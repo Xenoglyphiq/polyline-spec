@@ -11,7 +11,7 @@ The spec and conformance cases for Polyline. Each language port lives in its own
 | Language | Repo | Package | Spec pinned | Conformance | Status |
 |---|---|---|---|---|---|
 | Zig | `Xenoglyphiq/polyline-zig` | `polyline` | – | – | planned |
-| Julia | `Xenoglyphiq/EncodedPolylines.jl` | `EncodedPolylines` | – | – | planned |
+| Julia | `Xenoglyphiq/EncodedPolyline.jl` | `EncodedPolyline` | – | – | planned |
 | Nim | `Xenoglyphiq/polyline-nim` | `polyline` | – | – | planned |
 
 Install instructions and examples are in each port's repo.
