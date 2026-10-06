@@ -23,7 +23,9 @@ Read `.kit/CONVENTIONS.md` before changing anything: it covers data conventions,
 ## Checks every PR must pass
 
 1. `python .kit/validate.py .` (needs `pip install pyyaml jsonschema`)
-2. Fixture generation is reproducible: re-running `conformance/generate/` with the pinned oracle gives identical files
+2. Fixture generation is reproducible: `uv run conformance/generate/generate.py` (and `uv run bench/generate.py`) leave no diff. CI checks both.
+
+The generator pins the oracle in its own header, so `uv` installs the exact version. Cases the oracle can't produce are written from the spec in the same script and marked `source: "spec"`; every oracle result is also checked against that spec transcription.
 
 ## Style
 
